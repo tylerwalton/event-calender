@@ -45,7 +45,7 @@ if (divId<hour) {
   $(this).removeClass("future")
   $(this).addClass("past")
 }
-else if (divId === hour) {
+else if (divId == hour) {
     $(this).removeClass("past");
     $(this).removeClass("future");
     $(this).addClass("present");
