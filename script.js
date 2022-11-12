@@ -1,5 +1,5 @@
 var today = dayjs();
-$("#currentDay").text(today.format("MMM D, YYYY H:mm"));
+$("#currentDay").text(today.format("MMM D, YYYY"));
 
 var saveButtonEl = document.querySelector("save");
 var now = dayjs().hour();
