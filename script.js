@@ -1,9 +1,6 @@
 var today = dayjs();
 $("#currentDay").text(today.format("MMM D, YYYY H:mm"));
 
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 var saveButtonEl = document.querySelector("save");
 var now = dayjs().hour();
 var hour9 = $("#9");
@@ -60,6 +57,4 @@ else {
 }
 }) 
 
-
-  // TODO: Add code to display the current date in the header of the page.
 });
