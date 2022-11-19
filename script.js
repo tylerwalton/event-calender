@@ -13,15 +13,13 @@ var hour15 = $("#15");
 var hour16 = $("#16");
 var hour17 = $("#17");
 
-
 $(document).ready(function () {
-  // saveBtn click listener
+
   $(".saveBtn").on("click", function () {
-    // Get nearby values of the description in JQuery
+
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
-    // Save text in local storage
     localStorage.setItem(time, text);
   });
 
@@ -35,7 +33,6 @@ $(document).ready(function () {
   $("#16 .description").val((localStorage.getItem("16")))
   $("#17 .description").val((localStorage.getItem("17")))
   
-  
 $(".time-block").each(function(){
 var hour = dayjs().format("H")
 console.log(hour);
@@ -44,6 +41,7 @@ if (divId<hour) {
   $(this).removeClass("present")
   $(this).removeClass("future")
   $(this).addClass("past")
+  
 }
 else if (divId == hour) {
     $(this).removeClass("past");
@@ -56,5 +54,4 @@ else {
    $(this).addClass("future");
 }
 }) 
-
 });
